@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Beaudry Marketing | Less noise. More growth.</title>
+<meta name="description" content="Beaudry Marketing is a modern marketing studio for digital growth, high-converting websites, branding and creative campaigns.">
+<meta name="theme-color" content="#060607">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Beaudry Marketing | Less noise. More growth.">
+<meta property="og:description" content="A modern marketing studio for digital growth, high-converting websites, branding and creative campaigns.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23060607'/%3E%3Ccircle cx='16' cy='16' r='8' fill='%232f5bff'/%3E%3Ccircle cx='19' cy='13' r='4' fill='%2319e3ff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;800;900&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--ink:#060607;--paper:#f3efe7;--blue:#2f5bff;--cyan:#19e3ff;--violet:#7b3dff;--mag:#ff2d9a;--g:clamp(1.1rem,4vw,3.5rem);--e:cubic-bezier(.16,1,.3,1);--f:"Inter Tight","Helvetica Neue",Arial,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit;margin:0}
+body{background:var(--ink);color:var(--paper);font:500 1rem/1.5 var(--f);overflow-x:clip;-webkit-font-smoothing:antialiased}
+body.lock{overflow:hidden}
+body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:calc(1rem + env(safe-area-inset-top,0px)) var(--g) 1rem;transition:background .5s}
+.nav.sc{background:rgba(6,6,7,.8);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.wm{display:flex;align-items:center;gap:.45rem;font-weight:900;font-size:1.35rem;letter-spacing:-.05em;text-transform:uppercase}
+.wm i{width:.5em;height:.5em;border-radius:50%;background:conic-gradient(var(--cyan),var(--blue),var(--violet),var(--mag),var(--cyan))}
+.wm small{font-size:.5rem;font-weight:800;letter-spacing:.24em;line-height:1;opacity:.7}
+.nr{display:flex;align-items:center;gap:1.5rem;font-weight:800;font-size:.9rem}
+.mb{position:relative;width:3.4rem;height:3.4rem;border-radius:50%;border:1px solid rgba(243,239,231,.45);background:transparent;cursor:pointer;transition:transform .5s var(--e),background .3s}@media(hover:hover){.mb:hover{background:rgba(243,239,231,.12)}}
+.mb i{position:absolute;left:50%;top:50%;width:18px;height:2px;margin:-1px 0 0 -9px;background:currentColor;transition:transform .5s var(--e)}
+.mb i:first-child{transform:translateY(-4px)}.mb i:last-child{transform:translateY(4px)}
+.mb[aria-expanded=true] i:first-child{transform:rotate(45deg)}.mb[aria-expanded=true] i:last-child{transform:rotate(-45deg)}
+.js .nav>*{opacity:0;transform:translateY(-12px);transition:opacity 1s var(--e) .6s,transform 1s var(--e) .6s}.in .nav>*{opacity:1;transform:none}
+#menu{position:fixed;inset:0;z-index:40;background:var(--ink);display:flex;flex-direction:column;justify-content:center;padding:6rem var(--g) 3rem;clip-path:circle(0 at calc(100% - var(--g) - 1.7rem) 2.7rem);visibility:hidden;transition:clip-path .9s var(--e),visibility 0s .9s}
+#menu.open{clip-path:circle(150% at calc(100% - var(--g) - 1.7rem) 2.7rem);visibility:visible;transition:clip-path .9s var(--e),visibility 0s}
+#menu a{display:block;width:fit-content;font-size:clamp(2.8rem,10vw,7rem);font-weight:900;letter-spacing:-.05em;line-height:1;text-transform:uppercase;padding:.12em 0;transition:transform .5s var(--e),color .3s}@media(hover:hover){#menu a:hover{transform:translateX(1rem);color:var(--cyan)}}
+#menu p{margin-top:2.5rem;opacity:.6}
+.tbtn{padding:.8em 1.3em;border-radius:99px;background:var(--paper);color:var(--ink);font-weight:800;font-size:.85rem;white-space:nowrap;transition:transform .5s var(--e),background .3s}@media(hover:hover){.tbtn:hover{background:var(--cyan)}}
+.js .view{display:none}.js .view.on{display:block}
+#wipe{position:fixed;inset:0;z-index:70;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--violet) 55%,var(--mag));transform:translateY(100%);pointer-events:none;font-size:clamp(3rem,14vw,12rem);font-weight:900;letter-spacing:-.055em;text-transform:uppercase}
+.ex{display:grid;padding:0 var(--g) clamp(4rem,9vw,8rem)}
+.ex a{display:flex;justify-content:space-between;align-items:center;gap:1rem 1.5rem;padding:1.4rem 0;border-top:1px solid rgba(243,239,231,.2);transition:padding .6s var(--e)}
+.ex a:last-child{border-bottom:1px solid rgba(243,239,231,.2)}
+.ex b{font-size:clamp(1.8rem,8.5vw,9rem);font-weight:900;letter-spacing:-.055em;line-height:.9;text-transform:uppercase}
+.ex span{max-width:30ch;text-align:right;font-size:clamp(.85rem,1.3vw,1.05rem);opacity:.65}@media(hover:hover){.ex a:hover{padding-left:1.2rem}}@media(hover:hover){.ex a:hover b{background:linear-gradient(90deg,var(--cyan),var(--violet),var(--mag));-webkit-background-clip:text;background-clip:text;color:transparent}}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:7rem var(--g) 2rem;overflow:clip;isolation:isolate}
+.hero canvas,.vid{position:absolute;inset:0;width:100%;height:100%;z-index:-2;object-fit:cover}
+.fb{position:absolute;inset:-20%;z-index:-2;background:radial-gradient(40% 50% at 25% 40%,var(--blue),transparent 70%),radial-gradient(35% 45% at 70% 30%,var(--violet),transparent 70%),radial-gradient(30% 40% at 60% 75%,var(--mag),transparent 70%),radial-gradient(30% 40% at 85% 60%,var(--cyan),transparent 70%);filter:blur(40px);opacity:.75;animation:drift 20s ease-in-out infinite alternate}
+.hero.gl .fb{display:none}
+@keyframes drift{to{transform:translate3d(4%,-3%,0) rotate(8deg) scale(1.1)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(6,6,7,.75),transparent 55%)}
+.js .cv{opacity:0;transition:opacity 2.4s ease}.in .cv{opacity:1}
+.h1{font-size:clamp(3rem,12vw,16rem);font-weight:900;line-height:.84;letter-spacing:-.055em;text-transform:uppercase;will-change:transform}
+.ln{display:block;overflow:clip;padding-bottom:.07em;margin-bottom:-.07em}
+.ln>span{display:block}
+.js .ln>span{transform:translateY(110%);transition:transform 1.4s var(--e) var(--d,0s)}
+.in .ln>span{transform:none}
+.m{display:none}
+.hr{display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;flex-wrap:wrap;margin-top:clamp(1.5rem,3vw,2.5rem)}
+.hr p{max-width:34ch;font-size:clamp(1rem,1.4vw,1.2rem);opacity:.9}
+.js .hr>*{opacity:0;transform:translateY(20px);transition:opacity 1.2s var(--e) 1s,transform 1.2s var(--e) 1s}.in .hr>*{opacity:1;transform:none}
+.cta{display:inline-flex;align-items:center;gap:.9em;padding:1.15em 1.7em;border:0;border-radius:99px;background:var(--paper);color:var(--ink);font-weight:800;font-size:.95rem;cursor:pointer;transition:transform .5s var(--e),background .3s}@media(hover:hover){.cta:hover{background:var(--cyan)}}
+.cta i{width:.6em;height:.6em;border-radius:50%;background:var(--blue)}
+.sci{display:flex;align-items:center;gap:.8rem;font-size:.8rem}
+.sci i{width:1px;height:42px;background:linear-gradient(var(--paper),transparent);transform-origin:top;animation:sl 2s var(--e) infinite}
+@keyframes sl{0%{transform:scaleY(0)}60%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+.mq{display:flex;overflow:clip;border-block:1px solid rgba(243,239,231,.14);padding:1.1rem 0;white-space:nowrap;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq div{display:flex;flex:none;gap:3rem;padding-right:3rem;font-weight:900;letter-spacing:-.03em;text-transform:uppercase;font-size:clamp(1.5rem,3.6vw,2.8rem);will-change:transform;animation:mq 22s linear infinite}@media(hover:hover){.mq:hover div{animation-play-state:paused}}
+.mq span::after{content:"/";margin-left:3rem;color:var(--mag)}
+@keyframes mq{to{transform:translateX(-100%)}}
+/* sections */
+section{position:relative;padding:clamp(5rem,12vw,11rem) var(--g)}
+.paper{background:var(--paper);color:var(--ink)}
+.big{font-weight:800;letter-spacing:-.045em;line-height:.98}
+.h2{font-size:clamp(2.4rem,7vw,7rem)}
+.note{font-size:.9rem;opacity:.65;max-width:46ch}
+.w{display:inline-block;overflow:clip;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
+.w>span{display:inline-block;transform:translateY(110%);transition:transform 1.1s var(--e) calc(var(--i)*55ms)}
+.vis .w>span{transform:none}
+.st{display:grid;grid-template-columns:repeat(12,1fr);gap:2rem 1.5rem}
+.st h2{grid-column:1/-1;font-size:clamp(2rem,6.2vw,6.4rem)}
+.st aside{grid-column:1/-1;max-width:36ch;opacity:.75}
+@media(min-width:860px){.st h2{grid-column:2/-1}.st aside{grid-column:8/-1}}
+/* about */
+.lead{max-width:44ch;font-size:clamp(1.1rem,1.8vw,1.5rem);margin-top:1.5rem;opacity:.85}
+.pr{list-style:none;padding:0;margin-top:clamp(2.5rem,6vw,4.5rem)}
+.pr li{display:grid;gap:.5rem 2rem;padding:1.6rem 0;border-top:1px solid rgba(243,239,231,.2)}
+.pr li:last-child{border-bottom:1px solid rgba(243,239,231,.2)}
+.pr h3{font-size:clamp(1.8rem,5vw,4.2rem);font-weight:800;letter-spacing:-.045em;line-height:1}
+.pr p{opacity:.7;max-width:40ch}
+.abx{margin-top:3rem}
+@media(min-width:860px){.pr li{grid-template-columns:1.2fr 1fr;align-items:baseline}}
+/* services */
+.sv{list-style:none;padding:0;margin-top:3rem}
+.sv li{border-top:1px solid rgba(6,6,7,.2)}.sv li:last-child{border-bottom:1px solid rgba(6,6,7,.2)}
+.sv button{display:flex;justify-content:space-between;align-items:baseline;width:100%;padding:1.4rem 0;background:none;border:0;text-align:left;cursor:pointer;transition:padding .6s var(--e)}
+.sv .t{font-size:clamp(1.7rem,5.4vw,5rem);font-weight:800;letter-spacing:-.045em;line-height:1}
+.sv .ar{font-size:1.8rem;transition:transform .6s var(--e)}
+.sv .d{display:grid;grid-template-rows:0fr;transition:grid-template-rows .7s var(--e)}
+.sv .d>p{overflow:hidden;max-width:46ch;opacity:.75}.sv li.open .d,.sv button:focus-visible+.d{grid-template-rows:1fr}@media(hover:hover){.sv li:hover .d{grid-template-rows:1fr}}@media(hover:hover){.sv li:hover button{padding-left:1rem}}.sv li.open .ar{transform:rotate(45deg)}@media(hover:hover){.sv li:hover .ar{transform:rotate(45deg)}}@media(hover:hover){.sv li:hover .t{background:linear-gradient(90deg,var(--blue),var(--violet),var(--mag));-webkit-background-clip:text;background-clip:text;color:transparent}}
+.sv button:focus-visible{outline-color:var(--blue);outline-offset:-2px}
+/* approach */
+.steps{position:relative;margin-top:4rem;padding-left:clamp(1.8rem,5vw,4rem)}
+.rail{position:absolute;left:0;top:0;bottom:0;width:2px;background:rgba(243,239,231,.15)}
+.rail::after{content:"";position:absolute;inset:0;background:linear-gradient(var(--cyan),var(--violet),var(--mag));transform-origin:top;transform:scaleY(var(--p,0))}
+.stp{display:grid;grid-template-columns:auto 1fr;gap:1rem 2rem;align-items:end;padding-bottom:clamp(3rem,8vw,7rem)}
+.num{font-size:clamp(4.5rem,13vw,12rem);font-weight:900;line-height:.8;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1px rgba(243,239,231,.55);transition:color 1s}
+.stp.vis .num{color:var(--paper);-webkit-text-stroke-color:transparent}
+.stp h3{font-size:clamp(1.8rem,4vw,3.4rem);font-weight:800;letter-spacing:-.04em;line-height:1}
+.stp p{max-width:34ch;opacity:.75;margin-top:.6rem}
+@media(min-width:860px){.stp:nth-of-type(even){margin-left:30%}}
+/* interlude */
+.il{background:var(--blue);min-height:90svh;display:grid;place-items:center;text-align:center;overflow:clip}
+.il h2{position:relative;z-index:1;font-size:clamp(2.6rem,10vw,10rem);line-height:.88;font-weight:900;letter-spacing:-.05em;text-transform:uppercase}
+.orb{position:absolute;left:50%;top:50%;width:80vmin;height:80vmin;margin:-40vmin 0 0 -40vmin;border-radius:50%;background:conic-gradient(var(--cyan),var(--blue),var(--violet),var(--mag),var(--paper),var(--cyan));-webkit-mask:radial-gradient(circle,transparent 42%,#000 64%);mask:radial-gradient(circle,transparent 42%,#000 64%);animation:sp 24s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+/* contact */
+.ct{display:grid;gap:3rem;align-items:start}
+@media(min-width:900px){.ct{grid-template-columns:1.1fr 1fr;gap:5rem}}
+.ct h2{font-size:clamp(2.8rem,8.4vw,8.5rem);font-weight:900;letter-spacing:-.055em;line-height:.88;text-transform:uppercase}
+form{display:grid;gap:1.6rem;color-scheme:dark}
+.fld{display:grid;gap:.3rem}
+label{font-size:.9rem;font-weight:800;opacity:.75}
+input,select,textarea{width:100%;background:none;border:0;border-bottom:1px solid rgba(243,239,231,.35);border-radius:0;padding:.7rem 0;font-size:1.15rem;transition:border-color .3s}
+select option{background:var(--ink)}
+textarea{min-height:7rem;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--cyan);box-shadow:0 1px 0 var(--cyan)}
+[aria-invalid=true]{border-color:var(--mag)}
+.er{min-height:1.2em;color:#ff7ac0;font-size:.85rem}
+#st{min-height:1.5em;font-size:.95rem;max-width:44ch}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1.5rem 3rem;padding:3rem var(--g) 2rem;border-top:1px solid rgba(243,239,231,.14);font-size:.9rem}
+footer a:not(.wm){background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .5s var(--e)}@media(hover:hover){footer a:not(.wm):hover{background-size:100% 1px}}
+#so{display:flex;gap:1.2rem}
+/* cursor */
+.cur{position:fixed;left:0;top:0;z-index:99;pointer-events:none;mix-blend-mode:difference;opacity:0;transition:opacity .4s}
+.cur span{position:absolute;display:grid;place-items:center;width:14px;height:14px;margin:-7px;border-radius:50%;background:#fff;color:#000;font-size:.75rem;font-weight:800;transition:width .5s var(--e),height .5s var(--e),margin .5s var(--e)}
+.cur.big span{width:76px;height:76px;margin:-38px}
+@media(max-width:700px){.h1{font-size:19vw}.m{display:initial}.sci{display:none}.wm small{display:none}.nr{gap:.6rem}.tbtn{font-size:.78rem;padding:.75em 1em}}
+@media(max-width:400px){.tbtn{font-size:.72rem;padding:.7em .85em}.mb{width:3rem;height:3rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}.js .ln>span,.w>span{transform:none!important}.js .v{clip-path:none}.mq div{animation:mq 60s linear infinite!important}}
+#menu a[aria-current=page]{color:var(--cyan)}
+.lg{display:inline-flex;padding:.2rem;border:1px solid rgba(243,239,231,.45);border-radius:99px;background:transparent;cursor:pointer;font-weight:800;font-size:.8rem}
+.lg b{padding:.4em .75em;border-radius:99px;transition:background .3s,color .3s}
+html[data-lang=en] .lg [data-l=en],html[data-lang=fr] .lg [data-l=fr]{background:var(--paper);color:var(--ink)}
+#menu .lg{margin-top:1.5rem;align-self:flex-start;font-size:1rem}
+html[data-lang=fr] .h1{font-size:clamp(2.4rem,7.6vw,11rem)}
+@media(max-width:700px){.nr .lg{display:none}html[data-lang=fr] .h1{font-size:13vw}}
+</style>
+</head>
+<body id="top">
+<header class="nav">
+ <a class="wm" href="#top" aria-label="Beaudry Marketing, home"><span>BDRY</span><i></i><small>MARKETING</small></a>
+ <div class="nr"><button class="lg" type="button" aria-label="Switch language"><b data-l="en">EN</b><b data-l="fr">FR</b></button><a class="tbtn" href="#contact" data-mag>Let's work together</a>
+ <button class="mb" data-mag aria-expanded="false" aria-controls="menu" aria-label="Open menu"><i></i><i></i></button></div>
+</header>
+<nav id="menu" aria-label="Main" inert>
+ <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#approach">Approach</a><a href="#contact">Contact</a>
+ <p>Less noise. More growth.</p><button class="lg" type="button" aria-label="Switch language"><b data-l="en">EN</b><b data-l="fr">FR</b></button>
+</nav>
+<div id="wipe" aria-hidden="true"></div>
+<main>
+<div class="view" id="v-home">
+<section class="hero" id="hero" aria-labelledby="h1" style="padding-top:7rem">
+ <div class="fb cv"></div><canvas id="gl" class="cv" aria-hidden="true"></canvas><video class="vid cv" id="hv" muted loop playsinline preload="auto" aria-hidden="true" hidden></video>
+ <h1 class="h1" id="h1"><span class="ln" style="--d:.15s"><span>Less<br class="m"> noise.</span></span><span class="ln" style="--d:.3s"><span>More<br class="m"> growth.</span></span></h1>
+ <div class="hr">
+  <p>Beaudry Marketing is a modern studio for digital growth: high-converting websites, sharp branding and campaigns that cut through.</p>
+  <div><a class="cta" href="#contact" data-mag>Start a project <i></i></a></div>
+  <span class="sci" aria-hidden="true">Scroll<i></i></span>
+ </div>
+</section>
+<div class="mq" aria-hidden="true"><div><span>Websites</span><span>Branding</span><span>Strategy</span><span>Conversion</span><span>Campaigns</span></div></div>
+
+<section class="paper st" aria-labelledby="s1">
+ <h2 class="big" id="s1" data-scrub>We help ambitious businesses sharpen their digital presence and attract the customers they were built for.</h2>
+ <aside>Strategy, design and build under one roof, so nothing gets lost between the brief and the launch.</aside>
+</section>
+
+<section class="ex" aria-label="Explore the site">
+ <a href="#about" data-cur="Open"><b>About</b><span>Clarity wins. Everything else is noise.</span></a>
+ <a href="#services" data-cur="Open"><b>Services</b><span>Sites that sell. Brands that stick.</span></a>
+ <a href="#approach" data-cur="Open"><b>Approach</b><span>Four steps. No fog.</span></a>
+ <a href="#contact" data-cur="Open"><b>Contact</b><span>Have something big in mind?</span></a>
+</section>
+</div>
+<div class="view" id="v-about">
+<section id="about" aria-labelledby="ab-h">
+ <h2 class="big h2" id="ab-h" data-words>Clarity wins. Everything else is noise.</h2>
+ <p class="lead">Beaudry Marketing helps ambitious businesses grow through design, build and strategy that work as one. We cut through the noise so your message lands with the people who matter.</p>
+ <ul class="pr">
+  <li><h3>Clarity first</h3><p>One message, said well, beats ten said loudly.</p></li>
+  <li><h3>Craft over templates</h3><p>Every site and identity is made for the business it represents.</p></li>
+  <li><h3>Built to perform</h3><p>Beautiful matters. Converting matters more. We design for both.</p></li>
+  <li><h3>Plain talk</h3><p>Clear scope, honest advice and no inflated promises.</p></li>
+ </ul>
+ <div class="abx"><a class="cta" href="#contact" data-mag>Start a conversation <i></i></a></div>
+</section>
+
+</div>
+<div class="view" id="v-services">
+<section class="paper" id="services" aria-labelledby="sv-h">
+ <h2 class="big h2" id="sv-h" data-words>Everything growth needs. Nothing it doesn't.</h2>
+ <ul class="sv">
+  <li><button aria-expanded="false"><span class="t">Website Design &amp; Development</span><span class="ar" aria-hidden="true">+</span></button><div class="d"><p>Fast, accessible sites designed to turn attention into enquiries.</p></div></li>
+  <li><button aria-expanded="false"><span class="t">Branding &amp; Visual Identity</span><span class="ar" aria-hidden="true">+</span></button><div class="d"><p>Identities with a point of view, so you are remembered, not just seen.</p></div></li>
+  <li><button aria-expanded="false"><span class="t">Digital Marketing Strategy</span><span class="ar" aria-hidden="true">+</span></button><div class="d"><p>A clear plan for where to show up, what to say and what to measure.</p></div></li>
+  <li><button aria-expanded="false"><span class="t">Conversion Optimization</span><span class="ar" aria-hidden="true">+</span></button><div class="d"><p>Small, tested changes that make more of the traffic you already have count.</p></div></li>
+  <li><button aria-expanded="false"><span class="t">Creative Campaigns</span><span class="ar" aria-hidden="true">+</span></button><div class="d"><p>Ideas bold enough to stop the scroll and built to be measured.</p></div></li>
+ </ul>
+</section>
+
+</div>
+<div class="view" id="v-approach">
+<section id="approach" aria-labelledby="ap-h">
+ <h2 class="big h2" id="ap-h" data-words>Four steps. No fog.</h2>
+ <div class="steps"><i class="rail" aria-hidden="true"></i>
+  <article class="stp"><span class="num" aria-hidden="true">01</span><div><h3>Discover</h3><p>We learn your market, customers and goals before a single pixel moves.</p></div></article>
+  <article class="stp"><span class="num" aria-hidden="true">02</span><div><h3>Design</h3><p>Identity, messaging and interface shaped into one confident system.</p></div></article>
+  <article class="stp"><span class="num" aria-hidden="true">03</span><div><h3>Build</h3><p>Fast, accessible, carefully crafted code, tested on the devices your customers use.</p></div></article>
+  <article class="stp"><span class="num" aria-hidden="true">04</span><div><h3>Grow</h3><p>Launch is the starting line. We measure, learn and refine to keep momentum.</p></div></article>
+ </div>
+</section>
+
+<section class="il" aria-labelledby="il-h"><div class="orb" aria-hidden="true"></div><h2 id="il-h" data-words>Your next chapter should look different.</h2></section>
+
+</div>
+<div class="view" id="v-contact">
+<section id="contact" aria-labelledby="ct-h">
+ <div class="ct">
+  <div><h2 id="ct-h" data-words>Have something big in mind?</h2><p class="note" style="margin-top:1.5rem">Tell us about the project. The more context, the better.</p></div>
+  <form id="f" novalidate>
+   <div class="fld"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="f-name-e"><small class="er" id="f-name-e"></small></div>
+   <div class="fld"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-email-e"><small class="er" id="f-email-e"></small></div>
+   <div class="fld"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization"></div>
+      <div class="fld"><label for="f-details">Project details</label><textarea id="f-details" name="details" required aria-describedby="f-details-e"></textarea><small class="er" id="f-details-e"></small></div>
+   <div><button class="cta" type="submit" data-mag>Send enquiry <i></i></button></div>
+   <p id="st" role="status"></p>
+  </form>
+ </div>
+</section>
+</div>
+</main>
+<footer>
+ <a class="wm" href="#top" aria-label="Back to top"><span>BDRY</span><i></i><small>MARKETING</small></a>
+ <span id="em">Email: add yours in index.html</span><span id="so"></span>
+ <small>&copy; <span id="yr"></span> Beaudry Marketing</small>
+</footer>
+<script>
+const FORM_ENDPOINT="/.netlify/functions/enquiry";   // e.g. a Formspree / Basin URL. Empty = form validates but is not connected.
+const EMAIL="Beaudrymarketing.websolutions@gmail.com";           // e.g. "hello@yourdomain.com"
+const SOCIAL={};          // e.g. {Instagram:"https://...", LinkedIn:"https://..."}
+const HERO_VIDEO="";      // e.g. "assets/hero.mp4" to use a video; empty = animated shader only
+const HERO_POSTER="";     // e.g. "assets/hero-poster.jpg"
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+requestAnimationFrame(()=>requestAnimationFrame(()=>document.body.classList.add('in')));
+$('#yr').textContent=new Date().getFullYear();
+if(EMAIL)$('#em').innerHTML=`<a href="mailto:${EMAIL}">${EMAIL}</a>`;
+$('#so').innerHTML=Object.entries(SOCIAL).map(([k,u])=>`<a href="${u}" target="_blank" rel="noopener">${k}</a>`).join('');
+{const g=$('.mq div');for(let i=0;i<3;i++)g.parentNode.appendChild(g.cloneNode(true))}
+/* language (EN/FR) */
+const FR={"Home": "Accueil", "About": "À propos", "Approach": "Approche", "Less noise. More growth.": "Moins de bruit. Plus de croissance.", "Let's work together": "Travaillons ensemble", "Less<br class=\"m\"> noise.": "Moins<br class=\"m\"> de bruit.", "More<br class=\"m\"> growth.": "Plus de<br class=\"m\"> croissance.", "Beaudry Marketing is a modern studio for digital growth: high-converting websites, sharp branding and campaigns that cut through.": "Beaudry Marketing est un studio moderne de croissance numérique : sites web à forte conversion, image de marque affûtée et campagnes qui se démarquent.", "Start a project <i></i>": "Démarrer un projet <i></i>", "Scroll<i></i>": "Défiler<i></i>", "Websites": "Sites web", "Branding": "Image de marque", "Strategy": "Stratégie", "Campaigns": "Campagnes", "We help ambitious businesses sharpen their digital presence and attract the customers they were built for.": "Nous aidons les entreprises ambitieuses à affûter leur présence numérique et à attirer les clients pour lesquels elles ont été créées.", "Strategy, design and build under one roof, so nothing gets lost between the brief and the launch.": "Stratégie, design et développement sous un même toit, pour que rien ne se perde entre le brief et le lancement.", "Clarity wins. Everything else is noise.": "La clarté l’emporte. Le reste n’est que du bruit.", "Sites that sell. Brands that stick.": "Des sites qui vendent. Des marques qui marquent.", "Four steps. No fog.": "Quatre étapes. Zéro brouillard.", "Have something big in mind?": "Un grand projet en tête ?", "Beaudry Marketing helps ambitious businesses grow through design, build and strategy that work as one. We cut through the noise so your message lands with the people who matter.": "Beaudry Marketing aide les entreprises ambitieuses à croître grâce à un design, un développement et une stratégie qui ne font qu’un. Nous coupons à travers le bruit pour que votre message atteigne les personnes qui comptent.", "Clarity first": "La clarté d’abord", "One message, said well, beats ten said loudly.": "Un message bien dit vaut mieux que dix criés.", "Craft over templates": "Du sur-mesure, pas des gabarits", "Every site and identity is made for the business it represents.": "Chaque site et chaque identité est conçu pour l’entreprise qu’il représente.", "Built to perform": "Conçu pour performer", "Beautiful matters. Converting matters more. We design for both.": "Le beau compte. Convertir compte davantage. Nous concevons pour les deux.", "Plain talk": "Parler franc", "Clear scope, honest advice and no inflated promises.": "Un cadre clair, des conseils honnêtes et aucune promesse exagérée.", "Start a conversation <i></i>": "Lançons la conversation <i></i>", "Everything growth needs. Nothing it doesn't.": "Tout ce dont la croissance a besoin. Rien de plus.", "Website Design &amp; Development": "Conception et développement de sites web", "Fast, accessible sites designed to turn attention into enquiries.": "Des sites rapides et accessibles, conçus pour transformer l’attention en demandes.", "Branding &amp; Visual Identity": "Image de marque et identité visuelle", "Identities with a point of view, so you are remembered, not just seen.": "Des identités affirmées, pour que l’on se souvienne de vous, pas seulement qu’on vous voie.", "Digital Marketing Strategy": "Stratégie de marketing numérique", "A clear plan for where to show up, what to say and what to measure.": "Un plan clair : où être présent, quoi dire et quoi mesurer.", "Conversion Optimization": "Optimisation des conversions", "Small, tested changes that make more of the traffic you already have count.": "De petits changements testés qui font mieux compter le trafic que vous avez déjà.", "Creative Campaigns": "Campagnes créatives", "Ideas bold enough to stop the scroll and built to be measured.": "Des idées assez audacieuses pour arrêter le défilement, conçues pour être mesurées.", "Discover": "Découvrir", "We learn your market, customers and goals before a single pixel moves.": "Nous étudions votre marché, vos clients et vos objectifs avant de bouger le moindre pixel.", "Design": "Concevoir", "Identity, messaging and interface shaped into one confident system.": "Identité, message et interface réunis en un système cohérent et assuré.", "Build": "Réaliser", "Fast, accessible, carefully crafted code, tested on the devices your customers use.": "Un code rapide, accessible et soigné, testé sur les appareils que vos clients utilisent.", "Grow": "Croître", "Launch is the starting line. We measure, learn and refine to keep momentum.": "Le lancement n’est que la ligne de départ. Nous mesurons, apprenons et affinons pour garder l’élan.", "Your next chapter should look different.": "Votre prochain chapitre devrait être différent.", "Tell us about the project. The more context, the better.": "Parlez-nous de votre projet. Plus il y a de contexte, mieux c’est.", "Name": "Nom", "Email": "Courriel", "Company": "Entreprise", "Project details": "Détails du projet", "Send enquiry <i></i>": "Envoyer la demande <i></i>"};
+const MSG={"en": {"name": "Enter your name.", "email": "Enter a valid email address, like name@company.com.", "details": "Add a few words about the project (at least 10 characters).", "fix": "Fix the highlighted fields and send again.", "noinbox": "Your details look good, but this form is not connected to an inbox yet. Set FORM_ENDPOINT in index.html to receive enquiries.", "open": "Opening your email app. If nothing opens, email us at {e}.", "sending": "Sending…", "ok": "Enquiry sent. We will reply by email.", "fail": "The enquiry could not be sent. Check your connection and try again.", "subj": "Project enquiry from ", "lname": "Name", "lmail": "Email", "lco": "Company", "menuo": "Open menu", "menuc": "Close menu", "sw": "Switch language"}, "fr": {"name": "Entrez votre nom.", "email": "Entrez une adresse courriel valide, par exemple nom@entreprise.com.", "details": "Ajoutez quelques mots sur le projet (10 caractères minimum).", "fix": "Corrigez les champs en surbrillance, puis réessayez.", "noinbox": "Vos informations sont valides, mais ce formulaire n’est pas encore relié à une boîte de réception. Définissez FORM_ENDPOINT dans index.html pour recevoir les demandes.", "open": "Ouverture de votre application de courriel. Si rien ne s’ouvre, écrivez-nous à {e}.", "sending": "Envoi…", "ok": "Demande envoyée. Nous vous répondrons par courriel.", "fail": "La demande n’a pas pu être envoyée. Vérifiez votre connexion, puis réessayez.", "subj": "Demande de projet de ", "lname": "Nom", "lmail": "Courriel", "lco": "Entreprise", "menuo": "Ouvrir le menu", "menuc": "Fermer le menu", "sw": "Changer de langue"}};
+let LANG='en';const M=k=>MSG[LANG][k];
+const VF={home:'Accueil',about:'À propos',services:'Services',approach:'Approche',contact:'Contact'};
+const regd=[];$$('body *').forEach(el=>{const k=el.innerHTML.trim();if(FR[k])regd.push([el,k])});
+function splitW(el){const t=el.textContent.trim();el.setAttribute('aria-label',t);el.innerHTML=t.split(' ').map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${w}</span></span>`).join(' ')}
+function splitS(el){el.innerHTML=el.textContent.trim().split(' ').map(w=>`<span class="sc-w">${w}</span>`).join(' ')}
+function setTitle(){const v=curV||'home';document.title=v==='home'?(LANG==='fr'?'Beaudry Marketing | Moins de bruit. Plus de croissance.':'Beaudry Marketing | Less noise. More growth.'):(LANG==='fr'?VF:VIEWS)[v]+' | Beaudry Marketing'}
+function setLang(l){LANG=l;const d=document.documentElement;d.lang=l;d.dataset.lang=l;
+ regd.forEach(([el,k])=>{const t=l==='fr'?FR[k]:k;if(el.hasAttribute('data-words')){el.textContent=t;splitW(el)}else if(el.hasAttribute('data-scrub')){el.textContent=t;splitS(el)}else el.innerHTML=t});
+ words.length=0;words.push(...$$('.sc-w'));
+ $$('.lg').forEach(b=>b.setAttribute('aria-label',M('sw')));
+ mb.setAttribute('aria-label',mb.getAttribute('aria-expanded')==='true'?M('menuc'):M('menuo'));
+ try{localStorage.setItem('bdry-lang',l)}catch(e){}
+ setTitle();upd()}
+/* text splitting + reveals */
+$$('[data-words]').forEach(splitW);$$('[data-scrub]').forEach(splitS);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}}),{threshold:.2});
+$$('[data-words],.pj,.stp').forEach(e=>io.observe(e));
+/* scroll: nav, scrubbed words, parallax, approach rail */
+const nav=$('.nav'),words=$$('.sc-w'),pars=$$('[data-par]'),rail=$('.rail');let tick=false;
+function upd(){tick=false;const vh=innerHeight;nav.classList.toggle('sc',scrollY>40||document.body.dataset.v!=='home');
+ if(!RM){words.forEach(w=>{const p=Math.min(1,Math.max(0,(vh*.9-w.getBoundingClientRect().top)/(vh*.4)));w.style.opacity=.14+.86*p});
+  pars.forEach(e=>{const r=e.parentElement.getBoundingClientRect();e.style.transform=`translate3d(0,${(r.top+r.height/2-vh/2)*e.dataset.par}px,0)`})}
+ const r=rail.parentElement.getBoundingClientRect();rail.style.setProperty('--p',Math.min(1,Math.max(0,(vh*.6-r.top)/r.height)))}
+addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});addEventListener('resize',upd);upd();
+/* menu */
+const mb=$('.mb'),mn=$('#menu');
+function menu(o){mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?M('menuc'):M('menuo'));mn.classList.toggle('open',o);o?mn.removeAttribute('inert'):mn.setAttribute('inert','');document.body.classList.toggle('lock',o)}
+mb.onclick=()=>menu(mb.getAttribute('aria-expanded')!=='true');
+$$('#menu a').forEach(a=>a.onclick=()=>menu(false));
+addEventListener('keydown',e=>{if(e.key==='Escape')menu(false)});
+/* services accordion (touch + keyboard; hover opens on desktop) */
+$$('.sv button').forEach(b=>b.onclick=()=>{const o=b.parentElement.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+/* magnetic buttons */
+if(!RM&&matchMedia('(hover:hover)').matches)$$('[data-mag]').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`});b.addEventListener('pointerleave',()=>b.style.transform='')});
+/* custom cursor (desktop only) */
+if(!RM&&matchMedia('(hover:hover) and (pointer:fine)').matches){const c=document.createElement('div');c.className='cur';c.innerHTML='<span></span>';document.body.append(c);let cx=0,cy=0,px=0,py=0,on=0;
+ addEventListener('pointermove',e=>{px=e.clientX;py=e.clientY;if(!on){on=1;cx=px;cy=py;c.style.opacity=1}const t=e.target.closest('[data-cur],a,button');c.classList.toggle('big',!!t);c.firstChild.textContent=t&&t.dataset.cur||''},{passive:true});
+ (function f(){cx+=(px-cx)*.18;cy+=(py-cy)*.18;c.style.transform=`translate3d(${cx}px,${cy}px,0)`;requestAnimationFrame(f)})()}
+/* hero: WebGL liquid-light shader with CSS fallback */
+const FS=`
+#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
+precision mediump float;
+#endif
+uniform vec2 r;uniform float t;uniform vec2 m;
+float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1.,0.)),f.x),mix(h(i+vec2(0.,1.)),h(i+vec2(1.)),f.x),f.y);}
+float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<4;i++){v+=a*n(p);p*=2.;a*=.5;}return v;}
+void main(){
+ vec2 uv=gl_FragCoord.xy/r;vec2 p=(gl_FragCoord.xy-.5*r)/r.y;p+=(m-.5)*.2;
+ float s=t*.1;
+ vec2 q=vec2(fbm(p*1.6+s),fbm(p*1.6-s+4.));
+ vec2 w=p+(vec2(fbm(p*1.5+q*2.+s*1.3),fbm(p*1.5+q*2.-s+7.))-.5)*1.6;
+ float f=fbm(w*1.3);
+ float b1=1.-abs(w.y*.9+(f-.5)*.9);
+ float b2=1.-abs(w.y*1.1-.45+(q.x-.5)*1.2);
+ float k=max(smoothstep(.1,1.,b1),.7*smoothstep(.3,1.,b2));
+ vec3 g=mix(vec3(.18,.36,1.),vec3(.48,.24,1.),smoothstep(.25,.65,f));
+ g=mix(g,vec3(.1,.89,1.),smoothstep(.55,.9,q.x));
+ g=mix(g,vec3(1.,.18,.6),smoothstep(.55,.85,q.y));
+ vec3 c=mix(vec3(.024,.024,.027),g,k*k*1.15);
+ c+=vec3(.95,.92,.85)*pow(k,5.)*.4;
+ c*=1.-.7*dot(uv-.5,uv-.5);
+ c+=(h(gl_FragCoord.xy+fract(t)*50.)-.5)*.045;
+ gl_FragColor=vec4(c,1.);
+}`;
+const hero=$('#hero'),h1=$('.h1'),cv=$('#gl'),U={};let gl=null,tx=0,ty=0,x=0,y=0,vis=true,raf=0;
+try{gl=cv.getContext('webgl',{antialias:false,alpha:false,powerPreference:'low-power'})}catch(e){}
+if(gl){const mk=(t,s)=>{const o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);return o},p=gl.createProgram();
+ gl.attachShader(p,mk(gl.VERTEX_SHADER,'attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}'));gl.attachShader(p,mk(gl.FRAGMENT_SHADER,FS));gl.linkProgram(p);
+ if(!gl.getProgramParameter(p,gl.LINK_STATUS))gl=null;else{gl.useProgram(p);const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);const a=gl.getAttribLocation(p,'a');gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,2,gl.FLOAT,false,0,0);['r','t','m'].forEach(k=>U[k]=gl.getUniformLocation(p,k));hero.classList.add('gl')}}
+if(!gl)cv.style.display='none';
+const hv=$('#hv');
+if(!HERO_VIDEO)hv.remove();
+else if(RM){hv.poster=HERO_POSTER;hv.hidden=false;hero.classList.add('gl');gl=null;cv.style.display='none'}
+else{hv.poster=HERO_POSTER;hv.src=HERO_VIDEO;hv.hidden=false;
+ hv.addEventListener('canplay',()=>hv.play().catch(()=>{}),{once:true});
+ hv.addEventListener('playing',()=>{hero.classList.add('gl');gl=null;cv.style.display='none'},{once:true});
+ hv.addEventListener('error',()=>hv.remove())}
+function draw(ts){x+=(tx-x)*.07;y+=(ty-y)*.07;if(!RM)h1.style.transform=`translate3d(${x*-36}px,${y*-18}px,0)`;
+ if(gl){gl.uniform1f(U.t,ts/1000);gl.uniform2f(U.m,x+.5,.5-y);gl.drawArrays(gl.TRIANGLES,0,3)}}
+function loop(ts){raf=0;if(!vis||document.hidden)return;draw(ts);raf=requestAnimationFrame(loop)}
+function go(){if(!raf&&!RM&&vis&&!document.hidden)raf=requestAnimationFrame(loop)}
+function resize(){if(!gl)return;const s=Math.min(devicePixelRatio||1,1.5)*.55;cv.width=Math.max(2,cv.clientWidth*s|0);cv.height=Math.max(2,cv.clientHeight*s|0);gl.viewport(0,0,cv.width,cv.height);gl.uniform2f(U.r,cv.width,cv.height);draw(1e4)}
+hero.addEventListener('pointermove',e=>{tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5});
+new IntersectionObserver(([e])=>{vis=e.isIntersecting;go()}).observe(hero);
+document.addEventListener('visibilitychange',go);addEventListener('resize',resize);resize();go();
+/* contact form */
+const form=$('#f'),st=$('#st');
+const rules={name:v=>v.trim().length>1||M('name'),email:v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim())||M('email'),details:v=>v.trim().length>=10||M('details')};
+function chk(el){const r=rules[el.name],m=r?r(el.value):true;$('#'+el.id+'-e').textContent=m===true?'':m;el.setAttribute('aria-invalid',m!==true);return m===true}
+form.addEventListener('input',e=>{if(e.target.getAttribute('aria-invalid')==='true')chk(e.target)});
+form.addEventListener('focusout',e=>{if(rules[e.target.name]&&e.target.value)chk(e.target)});
+form.addEventListener('submit',async e=>{e.preventDefault();
+ const bad=[...form.elements].filter(el=>rules[el.name]&&!chk(el));
+ if(bad.length){bad[0].focus();st.textContent=M('fix');return}
+ const d=Object.fromEntries(new FormData(form));
+ const viaMail=()=>{if(!EMAIL){st.textContent=M('noinbox');return}
+  location.href=`mailto:${EMAIL}?subject=${encodeURIComponent(M('subj')+d.name)}&body=${encodeURIComponent(`${M('lname')}: ${d.name}\n${M('lmail')}: ${d.email}\n${M('lco')}: ${d.company||'-'}\n\n${d.details}`)}`;
+  st.textContent=M('open').replace('{e}',EMAIL)};
+ if(!FORM_ENDPOINT){viaMail();return}
+ st.textContent=M('sending');
+ try{const r=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(d)});if(!r.ok)throw 0;form.reset();st.textContent=M('ok')}
+ catch{EMAIL?viaMail():st.textContent=M('fail')}});
+/* page views + transitions */
+const VIEWS={home:'Home',about:'About',services:'Services',approach:'Approach',contact:'Contact'},wipe=$('#wipe');let curV='',busy=false;
+const pick=()=>{const k=location.hash.slice(1);return VIEWS[k]?k:'home'};
+function show(v){$$('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));curV=v;document.body.dataset.v=v;$$('#menu a').forEach(a=>a.setAttribute('aria-current',a.hash==='#'+v?'page':'false'));setTitle();{const d=document.documentElement;d.style.scrollBehavior='auto';scrollTo(0,0);d.style.scrollBehavior=''}upd();if(v==='home'){resize();go()}}
+async function route(first){if(busy)return;const v=pick();
+ if(v===curV){if(!first)scrollTo({top:0,behavior:'smooth'});return}
+ if(first||RM||!wipe.animate){show(v);return}
+ busy=true;wipe.getAnimations().forEach(a=>a.cancel());wipe.textContent=(LANG==='fr'?VF:VIEWS)[v];
+ const ease='cubic-bezier(.76,0,.24,1)';
+ await wipe.animate([{transform:'translateY(100%)'},{transform:'translateY(0)'}],{duration:650,easing:ease,fill:'forwards'}).finished;
+ show(v);
+ await wipe.animate([{transform:'translateY(0)'},{transform:'translateY(-100%)'}],{duration:750,easing:ease,fill:'forwards'}).finished;
+ busy=false;route(true)}
+addEventListener('hashchange',()=>route());route(true);
+$$('.lg').forEach(b=>b.onclick=()=>setLang(LANG==='fr'?'en':'fr'));
+let saved='';try{saved=localStorage.getItem('bdry-lang')||''}catch(e){}
+if(saved==='fr')setLang('fr');
+</script>
+</body>
+</html>
