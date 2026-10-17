@@ -36,9 +36,9 @@ button,input,select,textarea{font:inherit;color:inherit}
 .mb i:first-child{transform:translateY(-4px)}.mb i:last-child{transform:translateY(4px)}
 .mb[aria-expanded=true] i:first-child{transform:rotate(45deg)}.mb[aria-expanded=true] i:last-child{transform:rotate(-45deg)}
 .js .nav>*{opacity:0;transform:translateY(-12px);transition:opacity 1s var(--e) .6s,transform 1s var(--e) .6s}.in .nav>*{opacity:1;transform:none}
-#menu{position:fixed;inset:0;z-index:40;background:var(--ink);display:flex;flex-direction:column;justify-content:center;padding:6rem var(--g) 3rem;clip-path:circle(0 at calc(100% - var(--g) - 1.7rem) 2.7rem);visibility:hidden;transition:clip-path .9s var(--e),visibility 0s .9s}
+#menu{position:fixed;inset:0;z-index:40;background:var(--ink);display:flex;flex-direction:column;padding:6rem var(--g) 3rem;overflow-y:auto;overscroll-behavior:contain;clip-path:circle(0 at calc(100% - var(--g) - 1.7rem) 2.7rem);visibility:hidden;transition:clip-path .9s var(--e),visibility 0s .9s}
 #menu.open{clip-path:circle(150% at calc(100% - var(--g) - 1.7rem) 2.7rem);visibility:visible;transition:clip-path .9s var(--e),visibility 0s}
-#menu a{display:block;width:fit-content;font-size:clamp(2.8rem,10vw,7rem);font-weight:900;letter-spacing:-.05em;line-height:1;text-transform:uppercase;padding:.12em 0;transition:transform .5s var(--e),color .3s}@media(hover:hover){#menu a:hover{transform:translateX(1rem);color:var(--cyan)}}
+#menu a{display:block;width:fit-content;font-size:clamp(2.2rem,min(9vw,10.5vh),7rem);font-weight:900;letter-spacing:-.05em;line-height:1;text-transform:uppercase;padding:.12em 0;transition:transform .5s var(--e),color .3s}@media(hover:hover){#menu a:hover{transform:translateX(1rem);color:var(--cyan)}}
 #menu p{margin-top:2.5rem;opacity:.6}
 .tbtn{padding:.8em 1.3em;border-radius:99px;background:var(--paper);color:var(--ink);font-weight:800;font-size:.85rem;white-space:nowrap;transition:transform .5s var(--e),background .3s}@media(hover:hover){.tbtn:hover{background:var(--cyan)}}
 .js .view{display:none}.js .view.on{display:block}
@@ -151,6 +151,8 @@ html[data-lang=en] .lg [data-l=en],html[data-lang=fr] .lg [data-l=fr]{background
 #menu .lg{margin-top:1.5rem;align-self:flex-start;font-size:1rem}
 html[data-lang=fr] .h1{font-size:clamp(2.4rem,7.6vw,11rem)}
 @media(max-width:700px){.nr .lg{display:none}html[data-lang=fr] .h1{font-size:13vw}}
+#menu>:first-child{margin-top:auto}
+#menu>:last-child{margin-bottom:auto}
 </style>
 </head>
 <body id="top">
